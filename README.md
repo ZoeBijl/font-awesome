@@ -21,7 +21,7 @@ From code, to test results, to how to actually do decent testing. Anything reall
 
 ## ToDo
 
-Need to have on of these
+Need to have one of these
 
 * Add links to relevant documents (bugs, GitHub issues, articles, anything really)
 * Add more examples
