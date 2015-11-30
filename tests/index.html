@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>How do assistive technologies handle Font Awesome?</title>
+    <link rel="stylesheet" href="core.css">
+    <!-- TODO: include font-awesome (duh) -->
+  </head>
+  <body>
+    <main>
+      <h1>How do assistive technologies handle Font Awesome?</h1>
+      <p>This document contains different ways to make icons—deliviered by Font Awesome—accessible.</p>
+
+      <!-- NOTE: might need to update the table as we go along -->
+      <!-- NOTE: this is just an example -->
+      <article>
+        <h2>Test one: Name of test</h2>
+        <p>Description of test</p>
+
+        <code>
+          <i class="fa fa-speaker" aria-hidden="true"></i>
+        </code>
+
+        <h3>Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>AT</th>
+              <th>Browser</th>
+              <th>OS</th>
+              <th>Expected</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>VoiceOver</td>
+              <td>Safari 9</td>
+              <td>OS X 10.10</td>
+              <td>Icon is not spoken</td>
+              <td>Icon is not spoken</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+    </main>
+  </body>
+</html>
