@@ -18,3 +18,11 @@ From code, to test results, to how to actually do decent testing. Anything reall
 2. copy a table row from tests/index.html
 4. Make a pull-request with a short description
 4. Profit?
+
+## ToDo
+
+Need to have on of these
+
+* Add links to relevant documents (bugs, GitHub issues, articles, anything really)
+* Add more examples
+* Do tests I guess ;)
