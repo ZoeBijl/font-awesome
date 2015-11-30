@@ -4,22 +4,32 @@
     <meta charset="UTF-8">
     <title>How do assistive technologies handle Font Awesome?</title>
     <link rel="stylesheet" href="core.css">
-    <!-- TODO: include font-awesome (duh) -->
+    <link rel="stylesheet" href="fa/css/font-awesome.css">
   </head>
   <body>
     <main>
       <h1>How do assistive technologies handle Font Awesome?</h1>
-      <p>This document contains different ways to make icons—deliviered by Font Awesome—accessible.</p>
+      <p>This document contains different ways to make icon fonts—deliviered by <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a> on this page—accessible.</p>
 
       <!-- NOTE: might need to update the table as we go along -->
-      <!-- NOTE: this is just an example -->
+      <!-- TODO: Add template in separate file -->
       <article>
-        <h2>Test one: Name of test</h2>
-        <p>Description of test</p>
+        <h2>Test one: <code>aria-hidden</code> on the icon</h2>
+        <p>We can hide the icon form assistive technologies (AT for short) by adding <code>aria-hidden</code>. This will however not convey the meaning—or any other information it caries—to users of AT.</p>
 
-        <code>
-          <i class="fa fa-speaker" aria-hidden="true"></i>
-        </code>
+        <section>
+          <h3>Example</h3>
+
+          <p>The link in this example has an icon of a bed before the text “Book a hotel”. The icon is however hidden for AT with <code>aria-hidden</code>.</p>
+
+          <a href="#book-hotel"><i class="fa fa-bed" aria-hidden="true"></i> Book a hotel</a>
+
+          <p>
+            <code>
+              &lt;a href="#book-hotel"&gt;&lt;i class="fa fa-bed" aria-hidden="true"&gt;&lt;/i&gt; Book a hotel&lt;/a&gt;
+            </code>
+          </p>
+        </section>
 
         <h3>Results</h3>
         <table>
