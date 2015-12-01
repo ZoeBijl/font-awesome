@@ -25,6 +25,7 @@ From code, to test results, to how to actually do decent testing. Anything is we
 
 ## Resources
 
+* [E-mail thread at WAI IG](https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/stroke-linecap)
 * [Icon Fonts + Unicode and Accessibility](http://sites.psu.edu/gotunicode/2013/06/26/icon_fonts_unicode_and_accessi/)
 * [ARIA for Screen Readers Not Able to Read Symbols](http://sites.psu.edu/gotunicode/2014/11/18/aria-for-screen-readers-not-able-to-read-symbols/)
 * [Death to Icon Fonts](https://www.youtube.com/watch?v=9xXBYcWgCHA) & [Slides](https://speakerdeck.com/ninjanails/death-to-icon-fonts)
