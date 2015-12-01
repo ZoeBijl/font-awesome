@@ -19,6 +19,10 @@ From code, to test results, to how to actually do decent testing. Anything reall
 4. Make a pull-request with a short description
 4. Profit?
 
+## How to properly test
+
+1. No one knows
+
 ## ToDo
 
 Need to have one of these
@@ -26,3 +30,14 @@ Need to have one of these
 * Add links to relevant documents (bugs, GitHub issues, articles, anything really)
 * Add more examples
 * Do tests I guess ;)
+
+## Resources
+
+* [Icon Fonts + Unicode and Accessibility](http://sites.psu.edu/gotunicode/2013/06/26/icon_fonts_unicode_and_accessi/)
+* [ARIA for Screen Readers Not Able to Read Symbols](http://sites.psu.edu/gotunicode/2014/11/18/aria-for-screen-readers-not-able-to-read-symbols/)
+* [Death to Icon Fonts](https://www.youtube.com/watch?v=9xXBYcWgCHA) & [Slides](https://speakerdeck.com/ninjanails/death-to-icon-fonts)
+* [Seriously, Don’t Use Icon Fonts](http://blog.cloudfour.com/seriously-dont-use-icon-fonts/)
+* [Bootstrap: How to use](http://getbootstrap.com/components/#glyphicons-how-to-use)
+* [Not allowing pages to choose their own fonts breaks with icon fonts](https://bugzilla.mozilla.org/show_bug.cgi?id=789788)
+* [Icon Usability](http://www.nngroup.com/articles/icon-usability/)
+* [Icon Classification: Resemblance, Reference, and Arbitrary Icons](http://www.nngroup.com/articles/classifying-icons/)
