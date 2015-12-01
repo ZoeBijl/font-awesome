@@ -9,7 +9,7 @@
   <body>
     <main>
       <h1>How do assistive technologies handle Font Awesome?</h1>
-      <p>This document contains different ways to make icon fonts—deliviered by <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a> on this page—accessible.</p>
+      <p>This document lists different options to make icon fonts—deliviered by <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a> on this page—accessible. It also lists the limitations of those options. Because these are just examples; all links are internal (they don't go anywhere).</p>
 
       <!-- NOTE: might need to update the table as we go along -->
       <!-- NOTE: template for tests can be found in ../test-template.html -->
@@ -38,8 +38,8 @@
               <th>AT</th>
               <th>Browser</th>
               <th>OS</th>
-              <th>Expected</th>
-              <th>Result</th>
+              <th>Expected Result</th>
+              <th>Actual Result</th>
             </tr>
           </thead>
           <tbody>
@@ -59,7 +59,59 @@
             </tr>
           </tbody>
         </table>
+
+        <h3>Issues</h3>
+        <ul>
+          <li>Icon meaning is not conveyed.</li>
+        </ul>
       </article>
+
+      <article>
+        <h2>Test two: visually hidden text and <code>aria-hidden</code> on the icon</h2>
+        <p>Besides hiding the icon from AT, we can also provide visually hidden text that describes the icon or conveys its meaning. This example uses the popular <code>sr-only</code> class to mark an elment as “for screen readers only”.</p>
+
+        <section>
+          <h3>Example</h3>
+
+          <p>The link in this example shows the GitHub logo without text. The icon is hidden for AT with <code>aria-hidden</code> and there is alternative text provided via teh <code>sr-only</code> class.</p>
+
+          <a href="#github"><i class="fa fa-github" aria-hidden="true"></i><span class="sr-only">GitHub</span></a>
+
+          <p>
+            <code>
+              &lt;a href="#github"&gt;&lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;&lt;span class="sr-only"&gt;GitHub&lt;/span&gt;&lt;/a&gt;
+            </code>
+          </p>
+        </section>
+
+        <h3>Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>AT</th>
+              <th>Browser</th>
+              <th>OS</th>
+              <th>Expected Result</th>
+              <th>Actual Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>VoiceOver</th>
+              <td>Safari 9</td>
+              <td>OS X 10.10</td>
+              <td>Alternative text is spoken, but icon is not.</td>
+              <td>Alternative text is spoken, but icon is not.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Issues</h3>
+        <ul>
+          <li>If the icon font doesn't load, this is an empty link. Can possibly be worked around with the <a href="https://drafts.csswg.org/css-font-loading/"> CSS Font Loading API</a>.</li>
+        </ul>
+      </article>
+
     </main>
   </body>
 </html>
