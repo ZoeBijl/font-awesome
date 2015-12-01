@@ -33,3 +33,5 @@ From code, to test results, to how to actually do decent testing. Anything is we
 * [Not allowing pages to choose their own fonts breaks with icon fonts](https://bugzilla.mozilla.org/show_bug.cgi?id=789788)
 * [Icon Usability](http://www.nngroup.com/articles/icon-usability/)
 * [Icon Classification: Resemblance, Reference, and Arbitrary Icons](http://www.nngroup.com/articles/classifying-icons/)
+* [Accessibility support for CSS generated content](http://tink.uk/accessibility-support-for-css-generated-content/)
+* [Lessons Learned: Accessibility Theory vs. Implementation Reality](http://files.paciellogroup.com/training/CSUN2014/lessonslearned/) (Use case 3)
