@@ -116,6 +116,52 @@
         </ul>
       </article>
 
+      <article>
+        <h2>Test three: <code>aria-label</code> on the icon</h2>
+        <p>We can provide alternative text for the icon to AT by adding <code>aria-label</code>.</p>
+
+        <section>
+          <h3>Example</h3>
+
+          <p>The link in this example has an icon of a book followed by the word “shop”. The icon has an <code>aria-label</code> with a value of “book” to communicate “book shop” to AT.</p>
+
+          <a href="#book-shop"><i class="fa fa-book" aria-label="book"></i> shop</a>
+
+          <p>
+            <code>
+              &lt;a href="#book-shop"&gt;&lt;i class="fa fa-book" aria-label="book"&gt;&lt;/i&gt; shop&lt;/a&gt;
+            </code>
+          </p>
+        </section>
+
+        <h3>Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>AT</th>
+              <th>Browser</th>
+              <th>OS</th>
+              <th>Expected Result</th>
+              <th>Actual Result</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>VoiceOver</th>
+              <td>Safari 9</td>
+              <td>OS X 10.10</td>
+              <td>Link is read as “Book shop”</td>
+              <td>Link is read as “Book shop”</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Issues</h3>
+        <ul>
+          <li>If the icon font doesn't load, this does not convey the same information to visual users. Can possibly be worked around with the <a href="https://drafts.csswg.org/css-font-loading/"> CSS Font Loading API</a>.</li>
+        </ul>
+      </article>
+
     </main>
   </body>
 </html>
