@@ -1,7 +1,12 @@
 body {
-  max-width: 45em;
   font-family: sans-serif;
   line-height: 1.5;
+}
+
+/* NOTE: Not the prettiest code, but allows the tables to be wider */
+main > :not(article),
+article > :not(table) {
+  max-width: 45rem;
 }
 
 /* TODO: add some tasty styles */
@@ -29,6 +34,12 @@ a:hover {
   color: hsl(104, 100%, 30%);
 }
 
+blockquote {
+  padding: 10px;
+  border-left: 5px solid hsl(0, 0%, 80%);
+  background: hsl(0, 0%, 92%);
+}
+
 code {
   display: inline-block;
   margin: 0;
@@ -42,8 +53,17 @@ code {
   background: hsl(0, 0%, 90%);
 }
 
+p {
+  margin: 0;
+}
+
+p:not(:first-child) {
+  margin-top: 1em;
+}
+
 table {
   width: 100%;
+  max-width: 65rem;
   border-collapse: collapse;
 }
 
@@ -53,7 +73,6 @@ thead {
 
 thead th {
   border-bottom: 1px solid #333;
-  text-align: left;
 }
 
 tbody th {
@@ -63,6 +82,10 @@ tbody th {
 th,
 td {
   padding: 5px;
+}
+
+th {
+  text-align: left;
 }
 
 /* TODO: Check contrast for colour blindness */
@@ -82,4 +105,8 @@ tr:nth-child(even) td {
 
 [href="#github"] {
   font-size: 2em;
+}
+
+.fa-heart {
+  color: hsl(2, 100%, 61%);
 }
