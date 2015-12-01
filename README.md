@@ -23,14 +23,6 @@ From code, to test results, to how to actually do decent testing. Anything reall
 
 1. No one knows
 
-## ToDo
-
-Need to have one of these
-
-* Add links to relevant documents (bugs, GitHub issues, articles, anything really)
-* Add more examples
-* Do tests I guess ;)
-
 ## Resources
 
 * [Icon Fonts + Unicode and Accessibility](http://sites.psu.edu/gotunicode/2013/06/26/icon_fonts_unicode_and_accessi/)
