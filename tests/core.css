@@ -1,8 +1,19 @@
 body {
   font-family: sans-serif;
+  line-height: 1.5;
 }
 
 /* TODO: add some tasty styles */
+
+article:not(:first-child) {
+  margin-top: 2.5em;
+  padding-top: 2.5em;
+  border-top: 1px solid #333;
+}
+
+h2 {
+  margin-top: 0;
+}
 
 a {
   color: hsl(204, 100%, 30%);
@@ -17,7 +28,21 @@ a:hover {
   color: hsl(104, 100%, 30%);
 }
 
+code {
+  display: inline-block;
+  margin: 0;
+  padding: 3px 6px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  color: hsl(229, 100%, 25%);
+  font-size: inherit;
+  line-height: 1;
+  vertical-align: baseline;
+  background: hsl(0, 0%, 90%);
+}
+
 table {
+  min-width: 50%;
   border-collapse: collapse;
 }
 
@@ -46,4 +71,14 @@ tr:nth-child(even) th {
 
 tr:nth-child(even) td {
   background: hsl(120, 69%, 85%);
+}
+
+/* Test specific CSS */
+.sr-only {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+[href="#github"] {
+  font-size: 2em;
 }
