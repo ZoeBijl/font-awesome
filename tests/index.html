@@ -35,17 +35,17 @@
         <table>
           <thead>
             <tr>
-              <th>AT</th>
-              <th>Browser</th>
-              <th>OS</th>
-              <th>Expected Result</th>
-              <th>Actual Result</th>
-              <th>Caret navigation</th>
+              <th scope="col">AT</th>
+              <th scope="col">Browser</th>
+              <th scope="col">OS</th>
+              <th scope="col">Expected Result</th>
+              <th scope="col">Actual Result</th>
+              <th scope="col">Caret navigation</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>VoiceOver</th>
+              <th scope="row">VoiceOver</th>
               <td>Safari 9</td>
               <td>OS X 10.10</td>
               <td>Icon is not spoken</td>
@@ -53,7 +53,7 @@
               <td>Icon is read as “new line”</td>
             </tr>
             <tr>
-              <th>VoiceOver</th>
+              <th scope="row">VoiceOver</th>
               <td>Yandex.browser</td>
               <td>OS X 10.9</td>
               <td>Icon is not spoken</td>
@@ -61,7 +61,7 @@
               <td>-</td>
             </tr>
             <tr>
-              <th>VoiceOver Braille display</th>
+              <th scope="row">VoiceOver Braille display</th>
               <td>Yandex.browser</td>
               <td>OS X 10.9</td>
               <td>Icon is not rendered</td>
@@ -69,12 +69,12 @@
               <td>-</td>
             </tr>
             <tr>
-              <th>VoiceOver</th>
+              <th scope="row">VoiceOver</th>
               <td>Safari</td>
               <td>iOS 9</td>
               <td>Icon is not spoken</td>
               <td>Icon is not spoken</td>
-              <td>-</td>
+              <td>Icon is not spoken</td>
             </tr>
           </tbody>
         </table>
@@ -101,29 +101,27 @@
             </a>
           </p>
 
-          <p>
 <pre><code>&lt;a href="#github"&gt;
   &lt;i class="fa fa-github" aria-hidden="true"&gt;&lt;/i&gt;
   &lt;span class="sr-only"&gt;GitHub&lt;/span&gt;
 &lt;/a&gt;</code></pre>
-          </p>
         </section>
 
         <h3>Results</h3>
         <table>
           <thead>
             <tr>
-              <th>AT</th>
-              <th>Browser</th>
-              <th>OS</th>
-              <th>Expected Result</th>
-              <th>Actual Result</th>
-              <th>Caret navigation</th>
+              <th scope="col">AT</th>
+              <th scope="col">Browser</th>
+              <th scope="col">OS</th>
+              <th scope="col">Expected Result</th>
+              <th scope="col">Actual Result</th>
+              <th scope="col">Caret navigation</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>VoiceOver</th>
+              <th scope="row">VoiceOver</th>
               <td>Safari 9</td>
               <td>OS X 10.10</td>
               <td>Alternative text is spoken, but icon is not.</td>
@@ -131,12 +129,12 @@
               <td>Icon is read as “new line”, followed by the visually hidden text</td>
             </tr>
             <tr>
-              <th>VoiceOver</th>
+              <th scope="row">VoiceOver</th>
               <td>Safari</td>
               <td>iOS 9</td>
               <td>Alternative text is spoken, but icon is not.</td>
               <td>Alternative text is spoken, but icon is not.</td>
-              <td>-</td>
+              <td>Alternative text is spelled, but icon is not.</td>
             </tr>
           </tbody>
         </table>
@@ -169,17 +167,17 @@
         <table>
           <thead>
             <tr>
-              <th>AT</th>
-              <th>Browser</th>
-              <th>OS</th>
-              <th>Expected Result</th>
-              <th>Actual Result</th>
-              <th>Caret navigation</th>
+              <th scope="col">AT</th>
+              <th scope="col">Browser</th>
+              <th scope="col">OS</th>
+              <th scope="col">Expected Result</th>
+              <th scope="col">Actual Result</th>
+              <th scope="col">Caret navigation</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>VoiceOver</th>
+              <th scope="row">VoiceOver</th>
               <td>Safari 9</td>
               <td>OS X 10.10</td>
               <td>Link is read as “Book shop”</td>
@@ -187,12 +185,12 @@
               <td>Icon is read as “new line”</td>
             </tr>
             <tr>
-              <th>VoiceOver</th>
+              <th scope="row">VoiceOver</th>
               <td>Safari</td>
               <td>iOS 9</td>
               <td>Link is read as “Book shop”</td>
               <td>Link is read as “Book shop”</td>
-              <td>-</td>
+              <td>Icon is spelled as “book”</td>
             </tr>
           </tbody>
         </table>
@@ -200,7 +198,7 @@
         <h3>Issues</h3>
         <ul>
           <li>If the icon font doesn't load, this does not convey the same information to visual users. Can possibly be worked around with the <a href="https://drafts.csswg.org/css-font-loading/">CSS Font Loading API</a>.</li>
-          <li>Despite our smart use of <code>aria-label</code> the text is not part of the rendered text and thus not navigational.</li>
+          <li>Despite our smart use of <code>aria-label</code> the text is not part of the rendered text and thus not navigational in all AT/ browser combinations.</li>
         </ul>
       </article>
 
@@ -229,22 +227,30 @@
         <table>
           <thead>
             <tr>
-              <th>AT</th>
-              <th>Browser</th>
-              <th>OS</th>
-              <th>Expected Result</th>
-              <th>Actual Result</th>
-              <th>Caret navigation</th>
+              <th scope="col">AT</th>
+              <th scope="col">Browser</th>
+              <th scope="col">OS</th>
+              <th scope="col">Expected Result</th>
+              <th scope="col">Actual Result</th>
+              <th scope="col">Caret navigation</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th>VoiceOver</th>
+              <th scope="row">VoiceOver</th>
               <td>Safari 9</td>
               <td>OS X 10.10</td>
-              <td>Icon is spoken as “love”</td>
-              <td>Icon is spoken as “love”</td>
               <td>Icon is spoken as “love, image”</td>
+              <td>Icon is spoken as “love, image”</td>
+              <td>Icon is spoken as “love, image”</td>
+            </tr>
+            <tr>
+              <th scope="row">VoiceOver</th>
+              <td>Safari</td>
+              <td>iOS 9</td>
+              <td>Icon is spoken as “love, image”</td>
+              <td>Icon is spoken as “love, image”</td>
+              <td>Icon is spelled as “love</td>
             </tr>
           </tbody>
         </table>
