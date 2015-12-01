@@ -22,7 +22,7 @@
 
           <p>The link in this example has an icon of a bed before the text “Book a hotel”. The icon is however hidden for AT with <code>aria-hidden</code>.</p>
 
-          <a href="#book-hotel"><i class="fa fa-bed" aria-hidden="true"></i> Book a hotel</a>
+          <p><a href="#book-hotel"><i class="fa fa-bed" aria-hidden="true"></i> Book a hotel</a></p>
 
           <p>
             <code>
@@ -40,6 +40,7 @@
               <th>OS</th>
               <th>Expected Result</th>
               <th>Actual Result</th>
+              <th>Caret navigation</th>
             </tr>
           </thead>
           <tbody>
@@ -49,6 +50,7 @@
               <td>OS X 10.10</td>
               <td>Icon is not spoken</td>
               <td>Icon is not spoken</td>
+              <td>Icon is read as “new line”</td>
             </tr>
             <tr>
               <th>VoiceOver</th>
@@ -56,6 +58,7 @@
               <td>OS X 10.9</td>
               <td>Icon is not spoken</td>
               <td>Icon is not spoken</td>
+              <td>-</td>
             </tr>
             <tr>
               <th>VoiceOver Braille display</th>
@@ -63,6 +66,7 @@
               <td>OS X 10.9</td>
               <td>Icon is not rendered</td>
               <td>Icon is not rendered</td>
+              <td>-</td>
             </tr>
             <tr>
               <th>VoiceOver</th>
@@ -70,6 +74,7 @@
               <td>iOS 9</td>
               <td>Icon is not spoken</td>
               <td>Icon is not spoken</td>
+              <td>-</td>
             </tr>
           </tbody>
         </table>
@@ -89,10 +94,12 @@
 
           <p>The link in this example shows the GitHub logo without text. The icon is hidden for AT with <code>aria-hidden</code> and there is alternative text provided via the <code>sr-only</code> class.</p>
 
-          <a href="#github">
-            <i class="fa fa-github" aria-hidden="true"></i>
-            <span class="sr-only">GitHub</span>
-          </a>
+          <p>
+            <a href="#github">
+              <i class="fa fa-github" aria-hidden="true"></i>
+              <span class="sr-only">GitHub</span>
+            </a>
+          </p>
 
           <p>
 <pre><code>&lt;a href="#github"&gt;
@@ -111,6 +118,7 @@
               <th>OS</th>
               <th>Expected Result</th>
               <th>Actual Result</th>
+              <th>Caret navigation</th>
             </tr>
           </thead>
           <tbody>
@@ -120,6 +128,7 @@
               <td>OS X 10.10</td>
               <td>Alternative text is spoken, but icon is not.</td>
               <td>Alternative text is spoken, but icon is not.</td>
+              <td>Icon is read as “new line”, followed by the visually hidden text</td>
             </tr>
             <tr>
               <th>VoiceOver</th>
@@ -127,13 +136,14 @@
               <td>iOS 9</td>
               <td>Alternative text is spoken, but icon is not.</td>
               <td>Alternative text is spoken, but icon is not.</td>
+              <td>-</td>
             </tr>
           </tbody>
         </table>
 
         <h3>Issues</h3>
         <ul>
-          <li>If the icon font doesn't load, this is an empty link. Can possibly be worked around with the <a href="https://drafts.csswg.org/css-font-loading/"> CSS Font Loading API</a>.</li>
+          <li>If the icon font doesn't load, this is an empty link. Can possibly be worked around with the <a href="https://drafts.csswg.org/css-font-loading/">CSS Font Loading API</a>.</li>
         </ul>
       </article>
 
@@ -146,7 +156,7 @@
 
           <p>The link in this example has an icon of a book followed by the word “shop”. The icon has an <code>aria-label</code> with a value of “book” to communicate “book shop” to AT.</p>
 
-          <a href="#book-shop"><i class="fa fa-book" aria-label="book"></i> shop</a>
+          <p><a href="#book-shop"><i class="fa fa-book" aria-label="book"></i> shop</a></p>
 
           <p>
             <code>
@@ -164,6 +174,7 @@
               <th>OS</th>
               <th>Expected Result</th>
               <th>Actual Result</th>
+              <th>Caret navigation</th>
             </tr>
           </thead>
           <tbody>
@@ -173,6 +184,7 @@
               <td>OS X 10.10</td>
               <td>Link is read as “Book shop”</td>
               <td>Link is read as “Book shop”</td>
+              <td>Icon is read as “new line”</td>
             </tr>
             <tr>
               <th>VoiceOver</th>
@@ -180,14 +192,68 @@
               <td>iOS 9</td>
               <td>Link is read as “Book shop”</td>
               <td>Link is read as “Book shop”</td>
+              <td>-</td>
             </tr>
           </tbody>
         </table>
 
         <h3>Issues</h3>
         <ul>
-          <li>If the icon font doesn't load, this does not convey the same information to visual users. Can possibly be worked around with the <a href="https://drafts.csswg.org/css-font-loading/"> CSS Font Loading API</a>.</li>
+          <li>If the icon font doesn't load, this does not convey the same information to visual users. Can possibly be worked around with the <a href="https://drafts.csswg.org/css-font-loading/">CSS Font Loading API</a>.</li>
+          <li>Despite our smart use of <code>aria-label</code> the text is not part of the rendered text and thus not navigational.</li>
         </ul>
+      </article>
+
+      <article>
+        <h2>Test four: <code>aria-label</code> and <code>role=img</code> on the icon</h2>
+        <p>We can add alternative text via <code>aria-label</code>, but as Joanie explained <a href="https://lists.w3.org/Archives/Public/w3c-wai-ig/2015OctDec/0062.html">this won't influence the icon node type</a>—which is still a text node; this causes issues because it allows for AT caret navigation (navigate text per character). We can work around this by adding <code>role="img"</code>; this turn the text node into a graphical node and thus disabled caret navigation.</p>
+
+        <section>
+          <h3>Example</h3>
+
+          <p>The icon in the next paragraph shows a heart, but it replaces the word “love” in the sentence. If we follow the <a href="http://www.w3.org/WAI/tutorials/images/informative/">alternative text guidelines for informative images</a> we should use a literal description:</p>
+          <blockquote cite="http://www.w3.org/WAI/tutorials/images/informative/">
+            <p>In some situations a detailed literal description may be needed, but only when the content of the image is all or part of the conveyed information.</p>
+          </blockquote>
+
+          <p>Every cool web project is made with <i class="fa fa-heart" role="img" aria-label="love"></i> these days. (And so is this one).</p>
+
+          <p>
+            <code>
+              &lt;i class="fa fa-heart" role="img" aria-label="love"&gt;&lt;/i&gt;
+            </code>
+          </p>
+        </section>
+
+        <h3>Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>AT</th>
+              <th>Browser</th>
+              <th>OS</th>
+              <th>Expected Result</th>
+              <th>Actual Result</th>
+              <th>Caret navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>VoiceOver</th>
+              <td>Safari 9</td>
+              <td>OS X 10.10</td>
+              <td>Icon is spoken as “love”</td>
+              <td>Icon is spoken as “love”</td>
+              <td>Icon is spoken as “love, image”</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Issues</h3>
+        <p>None so far :)</p>
+        <!-- <ul>
+          <li></li>
+        </ul> -->
       </article>
 
     </main>
