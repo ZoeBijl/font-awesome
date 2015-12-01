@@ -1,8 +1,8 @@
 # Font Awesome
-Assistive Technologies (AT) test for Font Awesome and icon fonts in general.
+Assistive Technologies (AT) test for Font Awesome and icon fonts in general. We decided to do these tests after [Dylan raised an issue with Font Awesome](https://github.com/FortAwesome/Font-Awesome/issues/6133).
 
 ## Any help welcome
-From code, to test results, to how to actually do decent testing. Anything really.
+From code, to test results, to how to actually do decent testing. Anything is welcome.
 
 ## How to add a test
 
