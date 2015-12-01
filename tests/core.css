@@ -82,6 +82,7 @@ tbody th {
 th,
 td {
   padding: 5px;
+  vertical-align: top;
 }
 
 th {
