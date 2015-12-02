@@ -13,7 +13,7 @@
 
       <!-- NOTE: might need to update the table as we go along -->
       <!-- NOTE: template for tests can be found in ../test-template.html -->
-      <article id="test-1">
+      <article id="test-1" tabindex="-1">
         <h2>Test one: <code>aria-hidden</code> on the icon</h2>
         <p>We can hide the icon form assistive technologies (AT for short) by adding <code>aria-hidden</code>. This will however not convey the meaning—or any other information it caries—to users of AT.</p>
 
@@ -85,7 +85,7 @@
         </ul>
       </article>
 
-      <article id="test-2">
+      <article id="test-2" tabindex="-1">
         <h2>Test two: visually hidden text and <code>aria-hidden</code> on the icon</h2>
         <p>Besides hiding the icon from AT, we can also provide visually hidden text that describes the icon or conveys its meaning. This example uses the popular <code>sr-only</code> class to mark an elment as “for screen readers only”.</p>
 
@@ -145,7 +145,7 @@
         </ul>
       </article>
 
-      <article id="test-3">
+      <article id="test-3" tabindex="-1">
         <h2>Test three: <code>aria-label</code> on the icon</h2>
         <p>We can provide alternative text for the icon to AT by adding <code>aria-label</code>.</p>
 
@@ -202,7 +202,7 @@
         </ul>
       </article>
 
-      <article id="test-4">
+      <article id="test-4" tabindex="-1">
         <h2>Test four: <code>aria-label</code> and <code>role=img</code> on the icon</h2>
         <p>We can add alternative text via <code>aria-label</code>, but as Joanie explained <a href="https://lists.w3.org/Archives/Public/w3c-wai-ig/2015OctDec/0062.html">this won't influence the icon node type</a>—which is still a text node; this causes issues because it allows for AT caret navigation (navigate text per character). We can work around this by adding <code>role="img"</code>; this turn the text node into a graphical node and thus disabled caret navigation.</p>
 
