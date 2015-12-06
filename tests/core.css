@@ -89,7 +89,6 @@ th {
   text-align: left;
 }
 
-/* TODO: Check contrast for colour blindness */
 tr:nth-child(even) th {
   background: hsl(120, 69%, 75%);
 }
