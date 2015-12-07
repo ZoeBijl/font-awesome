@@ -21,7 +21,22 @@ From code, to test results, to how to actually do decent testing. Anything is we
 
 ## How to properly test
 
-1. No one knows
+Depending on the icon coding technique, some or all of these scenarios will be worth testing.
+
+In a screen reader:
+
+1. Linear reading, e.g. screen reader "arrow navigation"
+2. Read the icon and its text equivalent in the context of a link. Techniques vary by screen reader: e.g. tab key, rotor, or list of links
+3. Read character-at-a-time, e.g. RightArrow
+4. Read with a Braille display
+5. Repeat the above tests with different verbosity settings, especially with settings related to punctuation.
+
+Other configurations for accessibility:
+
+1. Browser zoom: full page
+2. Browser zoom: text-only
+3. Windows high contrast mode
+4. Text customizations (details TBD)
 
 ## Resources
 
