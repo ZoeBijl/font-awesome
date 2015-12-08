@@ -1,6 +1,9 @@
 # Font Awesome
 Assistive Technologies (AT) test for Font Awesome and icon fonts in general. We decided to do these tests after [Dylan raised an issue with Font Awesome](https://github.com/FortAwesome/Font-Awesome/issues/6133).
 
+* All base test results are in `tests/index.html`
+* A non-ARIA test bed can be found in `tests/plain-bed.html`
+
 ## Any help welcome
 From code, to test results, to how to actually do decent testing. Anything is welcome.
 
