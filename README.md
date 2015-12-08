@@ -54,3 +54,10 @@ Other configurations for accessibility:
 * [Icon Classification: Resemblance, Reference, and Arbitrary Icons](http://www.nngroup.com/articles/classifying-icons/)
 * [Accessibility support for CSS generated content](http://tink.uk/accessibility-support-for-css-generated-content/)
 * [Lessons Learned: Accessibility Theory vs. Implementation Reality](http://files.paciellogroup.com/training/CSUN2014/lessonslearned/) (Use case 3)
+
+## Contributors
+
+* Mallory ([@StommePoes](https://twitter.com/StommePoes))
+* Michiel Bijl ([@MichielBijl](https://twitter.com/MichielBijl))
+* Mitchell Evan ([@mitchellrevan](https://twitter.com/mitchellrevan))
+* Chaals McCathieNevile ([@Chaals](https://twitter.com/chaals))
