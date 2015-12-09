@@ -1,0 +1,112 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+
+/* NOTE: Not the prettiest code, but allows the tables to be wider */
+main > :not(article),
+article > :not(table) {
+  max-width: 45rem;
+}
+
+/* TODO: add some tasty styles */
+
+article:not(:first-child) {
+  margin-top: 2.5em;
+  padding-top: 2.5em;
+  border-top: 1px solid #333;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+a {
+  color: hsl(204, 100%, 30%);
+}
+
+a:visited {
+  color: hsl(304, 100%, 30%);
+}
+
+a:focus,
+a:hover {
+  color: hsl(104, 100%, 30%);
+}
+
+blockquote {
+  padding: 10px;
+  border-left: 5px solid hsl(0, 0%, 80%);
+  background: hsl(0, 0%, 92%);
+}
+
+code {
+  display: inline-block;
+  margin: 0;
+  padding: 3px 6px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  color: hsl(229, 100%, 25%);
+  font-size: inherit;
+  line-height: 1;
+  vertical-align: baseline;
+  background: hsl(0, 0%, 90%);
+}
+
+p {
+  margin: 0;
+}
+
+p:not(:first-child) {
+  margin-top: 1em;
+}
+
+table {
+  width: 100%;
+  max-width: 65rem;
+  border-collapse: collapse;
+}
+
+thead {
+
+}
+
+thead th {
+  border-bottom: 1px solid #333;
+}
+
+tbody th {
+  background: hsl(120, 69%, 85%);
+}
+
+th,
+td {
+  padding: 5px;
+  vertical-align: top;
+}
+
+th {
+  text-align: left;
+}
+
+tr:nth-child(even) th {
+  background: hsl(120, 69%, 75%);
+}
+
+tr:nth-child(even) td {
+  background: hsl(120, 69%, 85%);
+}
+
+/* Test specific CSS */
+.sr-only {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+[href="#github"] {
+  font-size: 2em;
+}
+
+.fa-heart {
+  color: hsl(2, 100%, 61%);
+}

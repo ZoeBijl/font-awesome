@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>How do assistive technologies handle Font Awesome?</title>
+    <link rel="stylesheet" href="core.css">
+    <link rel="stylesheet" href="fa/css/font-awesome.css">
+  </head>
+  <body>
+    <main>
+      <h1>How do assistive technologies handle Font Awesome?</h1>
+      <p>This document lists different options to make icon fonts&mdash;delivered by <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a> on this page&mdash;accessible. It also lists the limitations of those options. Because these are just examples; all links are internal (they don't go anywhere).</p>
+
+      <!-- NOTE: might need to update the table as we go along -->
+      <!-- NOTE: template for tests can be found in ../test-template.html -->
+      <article id="test-1" tabindex="-1">
+        <h2>Test one: <code>aria-hidden</code> on the icon</h2>
+        <p>We can hide the icon from assistive technologies (AT for short) by adding <code>aria-hidden</code>. This will however not convey the meaning&mdash;or any other information it carries&mdash;to users of AT.</p>
+
+        <section>
+          <h3>Example</h3>
+
+          <p>The link in this example has an icon of a bed before the text "Book a hotel". The icon is however hidden for AT with <code>aria-hidden</code>.</p>
+
+          <p><a href="#book-hotel"><span class="fa fa-bed" aria-hidden="true"></span> Book a hotel</a></p>
+
+          <p>
+            <code>
+              &lt;a href="#book-hotel"&gt;&lt;span class="fa fa-bed" aria-hidden="true"&gt;&lt;/span&gt; Book a hotel&lt;/a&gt;
+            </code>
+          </p>
+        </section>
+
+        <h3>Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">AT, Browser, OS</th>
+              <th scope="col">Expected Result</th>
+              <th scope="col">Actual Result</th>
+              <th scope="col">Caret navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">VoiceOver, Safari 9, OS X 10.10</th>
+              <td>Icon is not spoken</td>
+              <td>Icon is not spoken</td>
+              <td>Icon is read as "new line"</td>
+            </tr>
+            <tr>
+              <th scope="row">VoiceOver, Yandex 15, OS X 10.9</th>
+              <td>Icon is not spoken</td>
+              <td>Icon is not spoken</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">VoiceOver Braille display, Yandex 15, OS X 10.9</th>
+              <td>Icon is not rendered</td>
+              <td>Icon is not rendered</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">VoiceOver, Safari, iOS 9</th>
+              <td>Icon is not spoken</td>
+              <td>Icon is not spoken</td>
+              <td>Icon is not spoken</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td>Icon is not spoken</td>
+              <td>Icon is not spoken</td>
+              <td>Icon is not spoken</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Issues</h3>
+        <ul>
+          <li>Icon meaning is not conveyed.</li>
+        </ul>
+      </article>
+
+      <article id="test-2" tabindex="-1">
+        <h2>Test two: visually hidden text and <code>aria-hidden</code> on the icon</h2>
+        <p>Besides hiding the icon from AT, we can also provide visually hidden text that describes the icon or conveys its meaning. This example uses the popular <code>sr-only</code> class to mark an elment as "for screen readers only".</p>
+
+        <section>
+          <h3>Example</h3>
+
+          <p>The link in this example shows the GitHub logo without text. The icon is hidden for AT with <code>aria-hidden</code> and there is alternative text provided via the <code>sr-only</code> class.</p>
+
+          <p>
+            <a href="#github">
+              <span class="fa fa-github" aria-hidden="true"></span>
+              <span class="sr-only">GitHub</span>
+            </a>
+          </p>
+
+<pre><code>&lt;a href="#github"&gt;
+  &lt;span class="fa fa-github" aria-hidden="true"&gt;&lt;/span&gt;
+  &lt;span class="sr-only"&gt;GitHub&lt;/span&gt;
+&lt;/a&gt;</code></pre>
+        </section>
+
+        <h3>Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">AT, Browser, OS</th>
+              <th scope="col">Expected Result</th>
+              <th scope="col">Actual Result</th>
+              <th scope="col">Caret navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">VoiceOver, Safari 9, OS X 10.10</th>
+              <td>Alternative text is spoken, but icon is not.</td>
+              <td>Alternative text is spoken, but icon is not.</td>
+              <td>Icon is read as "new line", followed by the visually hidden text</td>
+            </tr>
+            <tr>
+              <th scope="row">VoiceOver, Safari, iOS 9</th>
+              <td>Alternative text is spoken, but icon is not.</td>
+              <td>Alternative text is spoken, but icon is not.</td>
+              <td>Alternative text is spelled, but icon is not.</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td>Alternative text is spoken, but icon is not.</td>
+              <td>Alternative text is spoken, but icon is not.</td>
+              <td>Alternative text is spelled, but icon is not.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Issues</h3>
+        <ul>
+          <li>If the icon font doesn't load, this is an empty link. Can possibly be worked around with the <a href="https://drafts.csswg.org/css-font-loading/">CSS Font Loading API</a>.</li>
+          <li>No visible text for users who don't understand the icon meaning</li>
+        </ul>
+      </article>
+
+      <article id="test-3" tabindex="-1">
+        <h2>Test three: <code>aria-label</code> on the icon</h2>
+        <p>We can provide alternative text for the icon to AT by adding <code>aria-label</code>.</p>
+
+        <section>
+          <h3>Example</h3>
+
+          <p>The link in this example has an icon of a book followed by the word "shop". The icon has an <code>aria-label</code> with a value of "book" to communicate "book shop" to AT.</p>
+
+          <p><a href="#book-shop"><span class="fa fa-book" aria-label="book"></span> shop</a></p>
+
+          <p>
+            <code>
+              &lt;a href="#book-shop"&gt;&lt;span class="fa fa-book" aria-label="book"&gt;&lt;/span&gt; shop&lt;/a&gt;
+            </code>
+          </p>
+        </section>
+
+        <h3>Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">AT, Browser, OS</th>
+              <th scope="col">Expected Result</th>
+              <th scope="col">Actual Result</th>
+              <th scope="col">Caret navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">VoiceOver, Safari 9, OS X 10.10</th>
+              <td>Link is read as "Book shop"</td>
+              <td>Link is read as "Book shop"</td>
+              <td>Icon is read as "new line"</td>
+            </tr>
+            <tr>
+              <th scope="row">VoiceOver, Safari, iOS 9</th>
+              <td>Link is read as "Book shop"</td>
+              <td>Link is read as "Book shop"</td>
+              <td>Icon is spelled as "b-o-o-k"</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td>Link is read as "Book shop"</td>
+              <td>Link is read as a space, then "shop"</td>
+              <td>Icon is spelled as two spaces</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Issues</h3>
+        <ul>
+          <li>If the icon font doesn't load, this does not convey the same information to visual users. Can possibly be worked around with the <a href="https://drafts.csswg.org/css-font-loading/">CSS Font Loading API</a>.</li>
+          <li>Despite our smart use of <code>aria-label</code> the text is not part of the rendered text and thus not navigational in all AT/ browser combinations (JAWS/IE does not read out the aria-label).</li>
+        </ul>
+      </article>
+
+      <article id="test-4" tabindex="-1">
+        <h2>Test four: <code>aria-label</code> and <code>role=img</code> on the icon</h2>
+        <p>We can add alternative text via <code>aria-label</code>, but as Joanie explained <a href="https://lists.w3.org/Archives/Public/w3c-wai-ig/2015OctDec/0062.html">this won't influence the icon node type</a>—which is still a text node; this causes issues because it allows for AT caret navigation (navigate text per character). We can work around this by adding <code>role="img"</code>; this turn the text node into a graphical node and thus disabled caret navigation.</p>
+
+        <section>
+          <h3>Example</h3>
+
+          <p>The icon in the next paragraph shows a heart, but it replaces the word "love" in the sentence. If we follow the <a href="http://www.w3.org/WAI/tutorials/images/informative/">alternative text guidelines for informative images</a> we should use a literal description:</p>
+          <blockquote cite="http://www.w3.org/WAI/tutorials/images/informative/">
+            <p>In some situations a detailed literal description may be needed, but only when the content of the image is all or part of the conveyed information.</p>
+          </blockquote>
+
+          <p>Every cool web project is made with <span class="fa fa-heart" role="img" aria-label="love"></span> these days. (And so is this one).</p>
+
+          <p>
+            <code>
+              &lt;span class="fa fa-heart" role="img" aria-label="love"&gt;&lt;/span&gt;
+            </code>
+          </p>
+        </section>
+
+        <h3>Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">AT, Browser, OS</th>
+              <th scope="col">Expected Result</th>
+              <th scope="col">Actual Result</th>
+              <th scope="col">Caret navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">VoiceOver, Safari 9, OS X 10.10</th>
+              <td>Icon is spoken as "love, image"</td>
+              <td>Icon is spoken as "love, image"</td>
+              <td>Icon is spoken as "love, image"</td>
+            </tr>
+            <tr>
+              <th scope="row">VoiceOver, Safari, iOS 9</th>
+              <td>Icon is spoken as "love, image"</td>
+              <td>Icon is spoken as "love, image"</td>
+              <td>Icon is spelled as "l-o-v-e"</td>
+            </tr>
+            <tr>
+              <th scope="row">Orca 3.18, Firefox 42.0, Ubuntu <span hidden>Linux 64-bit </span>14.04</th>
+              <td>Icon is spoken as "love, image"</td>
+              <td>Icon is spoken as "love image"</td>
+              <td>Icon is spelled as "l-o-v-e image"</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, Firefox 42.0, Windows 7<span hidden> 64-bit</span></th>
+              <td>Icon is spoken as "graphic, love"</td>
+              <td>Icon is spoken as "graphic love"</td>
+              <td>Icon is spelled as "l-o-v-e"</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, IE 11, Windows 7<span hidden> 64-bit</span></th>
+              <td>Icon is spoken as "graphic, love"</td>
+              <td>Icon is not spoken and sentence broken up into 2 lines</td>
+              <td>Icon is spelled as two spaces</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA, IE 11, Windows 7<span hidden> 64-bit</span></th>
+              <td>Icon is spoken as "graphic, love"</td>
+              <td>Icon is spoken as "graphic love"</td>
+              <td>Icon is spelled as "graphic l-o-v-e"</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA, Firefox 42.0, Windows 7<span hidden> 64-bit</span></th>
+              <td>Icon is spoken as "graphic, love"</td>
+              <td>Icon is spoken as "graphic love"</td>
+              <td>Icon is spelled as "graphic l-o-v-e"</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Issues</h3>
+        <ul>
+          <li>Internet Explorer is ignoring the aria-label on an item with an explicit role.</li>
+        </ul>
+      </article>
+
+    </main>
+  </body>
+</html>
