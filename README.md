@@ -1,6 +1,9 @@
 # Font Awesome
 Assistive Technologies (AT) test for Font Awesome and icon fonts in general. We decided to do these tests after [Dylan raised an issue with Font Awesome](https://github.com/FortAwesome/Font-Awesome/issues/6133).
 
+* All base test results are in `tests/index.html`
+* A non-ARIA test bed can be found in `tests/plain-bed.html`
+
 ## Any help welcome
 From code, to test results, to how to actually do decent testing. Anything is welcome.
 
@@ -51,3 +54,10 @@ Other configurations for accessibility:
 * [Icon Classification: Resemblance, Reference, and Arbitrary Icons](http://www.nngroup.com/articles/classifying-icons/)
 * [Accessibility support for CSS generated content](http://tink.uk/accessibility-support-for-css-generated-content/)
 * [Lessons Learned: Accessibility Theory vs. Implementation Reality](http://files.paciellogroup.com/training/CSUN2014/lessonslearned/) (Use case 3)
+
+## Contributors
+
+* Mallory ([@StommePoes](https://twitter.com/StommePoes))
+* Michiel Bijl ([@MichielBijl](https://twitter.com/MichielBijl))
+* Mitchell Evan ([@mitchellrevan](https://twitter.com/mitchellrevan))
+* Chaals McCathieNevile ([@Chaals](https://twitter.com/chaals))
