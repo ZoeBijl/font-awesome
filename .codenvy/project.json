@@ -1,1 +1,0 @@
-{"runners":{"configs":{"system:/javascript/web/simple":{"variables":{},"ram":1000,"options":{}}},"default":"system:/javascript/web/simple"},"builders":{"configs":{}},"mixinTypes":[],"description":"Testing icons fonts for accessibility","type":"BasicJS","attributes":{"framework":["BasicJS"],"language":["javascript"]}}
