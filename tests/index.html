@@ -189,13 +189,19 @@
               <td>Link is read as a space, then <samp>shop</samp></td>
               <td>Icon is spelled as two spaces</td>
             </tr>
+            <tr>
+              <th scope="row">JAWS 16, FF 42, Windows 7</th>
+              <td>Link is read as <samp>Book shop</samp></td>
+              <td>Link is read as <samp>shop</samp></td>
+              <td>Icon is spelled as two spaces</td>
+            </tr>
           </tbody>
         </table>
 
         <h3>Issues</h3>
         <ul>
           <li>If the icon font doesn't load, this does not convey the same information to visual users. Can possibly be worked around with the <a href="https://drafts.csswg.org/css-font-loading/">CSS Font Loading API</a>.</li>
-          <li>Despite our smart use of <code>aria-label</code> the text is not part of the rendered text and thus not navigational in all AT/ browser combinations (JAWS/IE does not read out the aria-label).</li>
+          <li>Despite our smart use of <code>aria-label</code> the text is not part of the rendered text and thus not navigational in all AT/ browser combinations (JAWS does not read out the aria-label). (Try this with JAWS/FF with authored role of link?)</li>
         </ul>
       </article>
 
