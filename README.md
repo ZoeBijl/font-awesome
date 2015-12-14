@@ -4,10 +4,18 @@ Assistive Technologies (AT) test for Font Awesome and icon fonts in general. We 
 * All base test results are in `tests/index.html`
 * A non-ARIA test bed can be found in `tests/plain-bed.html`
 
-## Any help welcome
+## Progress
+At the time of writing—14 days in—the progress has been amazing! Great contributions from the community. Let's keep it up.
+
+### Any help welcome
 From code, to test results, to how to actually do decent testing. Anything is welcome.
 
-## How to add a test
+### Roadmap
+There is a [basic roadmap](https://github.com/MichielBijl/font-awesome/milestones) available. All new issues will be assigned to a fitting milestone within the roadmap.
+
+## How to go about this testing buisiness
+
+### How to add a test
 
 1. Copy the contents of test-template.html to tests/index.html
 2. Write test
@@ -15,14 +23,14 @@ From code, to test results, to how to actually do decent testing. Anything is we
 4. Make a pull-request with a short description
 4. Be awesome!
 
-## How to add results to a test
+### How to add results to a test
 
 1. Either copy the example table row from test-template.html or;
 2. copy a table row from tests/index.html
 4. Make a pull-request with a short description
 4. Profit?
 
-## How to properly test
+### How to properly test
 
 Depending on the icon coding technique, some or all of these scenarios will be worth testing.
 
