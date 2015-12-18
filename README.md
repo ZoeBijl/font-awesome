@@ -62,7 +62,7 @@ Other configurations for accessibility:
 * [Icon Classification: Resemblance, Reference, and Arbitrary Icons](http://www.nngroup.com/articles/classifying-icons/)
 * [Accessibility support for CSS generated content](http://tink.uk/accessibility-support-for-css-generated-content/)
 * [Lessons Learned: Accessibility Theory vs. Implementation Reality](http://files.paciellogroup.com/training/CSUN2014/lessonslearned/) (Use case 3)
-* [TESTING LABELING ICONS](http://haltersweb.github.io/Accessibility/testing-icon-labeling.html)
+* [Testing labeling icons](http://haltersweb.github.io/Accessibility/testing-icon-labeling.html)
 
 ## Contributors
 
