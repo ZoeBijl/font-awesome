@@ -137,3 +137,19 @@ tr:nth-child(even) td {
 .fa-heart {
   color: hsl(2, 100%, 61%);
 }
+
+/* SVG replacement styles */
+svg.fa {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+}
+
+svg.fa-bed {
+  width: 1.142578125em;
+}
+
+svg.fa-book {
+  width: 0.9287109375em;
+}
