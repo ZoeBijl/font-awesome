@@ -63,6 +63,7 @@ Other configurations for accessibility:
 * [Accessibility support for CSS generated content](http://tink.uk/accessibility-support-for-css-generated-content/)
 * [Lessons Learned: Accessibility Theory vs. Implementation Reality](http://files.paciellogroup.com/training/CSUN2014/lessonslearned/) (Use case 3)
 * [Testing labeling icons](http://haltersweb.github.io/Accessibility/testing-icon-labeling.html)
+* [Accessible svg sprite icons](https://gist.github.com/davidhund/564331193e1085208d7e)
 
 ## Contributors
 
