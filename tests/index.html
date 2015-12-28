@@ -36,6 +36,7 @@
           <thead>
             <tr>
               <th scope="col">AT, Browser, OS</th>
+              <th scope="col">Test Result</th>
               <th scope="col">Expected Result</th>
               <th scope="col">Actual Result</th>
               <th scope="col">Caret navigation</th>
@@ -44,30 +45,35 @@
           <tbody>
             <tr>
               <th scope="row">VoiceOver, Safari 9, OS X 10.10</th>
+              <td class="pass">Pass</td>
               <td>Icon is not spoken</td>
               <td>Icon is not spoken</td>
               <td>Icon is read as <samp>new line</samp></td>
             </tr>
             <tr>
               <th scope="row">VoiceOver, Yandex 15, OS X 10.9</th>
+              <td class="pass">Pass</td>
               <td>Icon is not spoken</td>
               <td>Icon is not spoken</td>
               <td>-</td>
             </tr>
             <tr>
               <th scope="row">VoiceOver Braille display, Yandex 15, OS X 10.9</th>
+              <td class="pass">Pass</td>
               <td>Icon is not rendered</td>
               <td>Icon is not rendered</td>
               <td>-</td>
             </tr>
             <tr>
               <th scope="row">VoiceOver, Safari, iOS 9</th>
+              <td class="pass">Pass</td>
               <td>Icon is not spoken</td>
               <td>Icon is not spoken</td>
               <td>Icon is not spoken</td>
             </tr>
             <tr>
               <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td class="pass">Pass</td>
               <td>Icon is not spoken</td>
               <td>Icon is not spoken</td>
               <td>Icon is not spoken</td>
@@ -108,6 +114,7 @@
           <thead>
             <tr>
               <th scope="col">AT, Browser, OS</th>
+              <th scope="col">Test Result</th>
               <th scope="col">Expected Result</th>
               <th scope="col">Actual Result</th>
               <th scope="col">Caret navigation</th>
@@ -116,18 +123,21 @@
           <tbody>
             <tr>
               <th scope="row">VoiceOver, Safari 9, OS X 10.10</th>
+              <td class="bug">Buggy</td>
               <td>Alternative text is spoken, but icon is not.</td>
               <td>Alternative text is spoken, but icon is not.</td>
               <td>Icon is read as <samp>new line</samp>, followed by the visually hidden text</td>
             </tr>
             <tr>
               <th scope="row">VoiceOver, Safari, iOS 9</th>
+              <td class="pass">Pass</td>
               <td>Alternative text is spoken, but icon is not.</td>
               <td>Alternative text is spoken, but icon is not.</td>
               <td>Alternative text is spelled, but icon is not.</td>
             </tr>
             <tr>
               <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td class="pass">Pass</td>
               <td>Alternative text is spoken, but icon is not.</td>
               <td>Alternative text is spoken, but icon is not.</td>
               <td>Alternative text is spelled, but icon is not.</td>
@@ -165,6 +175,7 @@
           <thead>
             <tr>
               <th scope="col">AT, Browser, OS</th>
+              <th scope="col">Test Result</th>
               <th scope="col">Expected Result</th>
               <th scope="col">Actual Result</th>
               <th scope="col">Caret navigation</th>
@@ -173,24 +184,28 @@
           <tbody>
             <tr>
               <th scope="row">VoiceOver, Safari 9, OS X 10.10</th>
+              <td class="fail">Fail</td>
               <td>Link is read as <samp>Book shop</samp></td>
               <td>Link is read as <samp>Book shop</samp></td>
               <td>Icon is read as <samp>new line</samp></td>
             </tr>
             <tr>
               <th scope="row">VoiceOver, Safari, iOS 9</th>
+              <td class="pass">Pass</td>
               <td>Link is read as <samp>Book shop</samp></td>
               <td>Link is read as <samp>Book shop</samp></td>
               <td>Icon is spelled as <samp>b-o-o-k</samp></td>
             </tr>
             <tr>
               <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td class="fail">Fail</td>
               <td>Link is read as <samp>Book shop</samp></td>
               <td>Link is read as a space, then <samp>shop</samp></td>
               <td>Icon is spelled as two spaces</td>
             </tr>
             <tr>
               <th scope="row">JAWS 16, FF 42, Windows 7</th>
+              <td class="fail">Fail</td>
               <td>Link is read as <samp>Book shop</samp></td>
               <td>Link is read as <samp>shop</samp></td>
               <td>Icon is spelled as two spaces</td>
@@ -231,6 +246,7 @@
           <thead>
             <tr>
               <th scope="col">AT, Browser, OS</th>
+              <th scope="col">Test Result</th>
               <th scope="col">Expected Result</th>
               <th scope="col">Actual Result</th>
               <th scope="col">Caret navigation</th>
@@ -239,42 +255,49 @@
           <tbody>
             <tr>
               <th scope="row">VoiceOver, Safari 9, OS X 10.10</th>
+              <td class="pass">Pass</td>
               <td>Icon is spoken as <samp>love, image</samp></td>
               <td>Icon is spoken as <samp>love, image</samp></td>
               <td>Icon is spoken as <samp>love, image</samp></td>
             </tr>
             <tr>
               <th scope="row">VoiceOver, Safari, iOS 9</th>
+              <td class="pass">Pass</td>
               <td>Icon is spoken as <samp>love, image</samp></td>
               <td>Icon is spoken as <samp>love, image</samp></td>
               <td>Icon is spelled as <samp>l-o-v-e</samp></td>
             </tr>
             <tr>
               <th scope="row">Orca 3.18, Firefox 42.0, Ubuntu <span hidden>Linux 64-bit </span>14.04</th>
+              <td class="pass">Pass</td>
               <td>Icon is spoken as <samp>love, image</samp></td>
               <td>Icon is spoken as <samp>love image</samp></td>
               <td>Icon is spelled as <samp>l-o-v-e image</samp></td>
             </tr>
             <tr>
               <th scope="row">JAWS 16, Firefox 42.0, Windows 7<span hidden> 64-bit</span></th>
+              <td class="pass">Pass</td>
               <td>Icon is spoken as <samp>graphic, love</samp></td>
               <td>Icon is spoken as <samp>graphic love</samp></td>
               <td>Icon is spelled as <samp>l-o-v-e</samp></td>
             </tr>
             <tr>
               <th scope="row">JAWS 16, IE 11, Windows 7<span hidden> 64-bit</span></th>
+              <td class="fail">Fail</td>
               <td>Icon is spoken as <samp>graphic, love</samp></td>
               <td>Icon is not spoken and sentence broken up into 2 lines</td>
               <td>Icon is spelled as two spaces</td>
             </tr>
             <tr>
               <th scope="row">NVDA, IE 11, Windows 7<span hidden> 64-bit</span></th>
+              <td class="pass">Pass</td>
               <td>Icon is spoken as <samp>graphic, love</samp></td>
               <td>Icon is spoken as <samp>graphic love</samp></td>
               <td>Icon is spelled as <samp>graphic l-o-v-e</samp></td>
             </tr>
             <tr>
               <th scope="row">NVDA, Firefox 42.0, Windows 7<span hidden> 64-bit</span></th>
+              <td class="pass">Pass</td>
               <td>Icon is spoken as <samp>graphic, love</samp></td>
               <td>Icon is spoken as <samp>graphic love</samp></td>
               <td>Icon is spelled as <samp>graphic l-o-v-e</samp></td>
