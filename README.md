@@ -62,6 +62,7 @@ Other configurations for accessibility:
 * [Lessons Learned: Accessibility Theory vs. Implementation Reality](http://files.paciellogroup.com/training/CSUN2014/lessonslearned/) (Use case 3)
 * [Testing labeling icons](http://haltersweb.github.io/Accessibility/testing-icon-labeling.html)
 * [Accessible svg sprite icons](https://gist.github.com/davidhund/564331193e1085208d7e)
+* [Testing accessible text for external SVG icons](https://dl.dropboxusercontent.com/u/145744/accessible-svg-icon/test.html#test)
 
 ## Contributors
 
