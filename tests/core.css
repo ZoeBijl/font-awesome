@@ -112,6 +112,18 @@ tr:nth-child(even) td {
   background: hsl(120, 69%, 85%);
 }
 
+.pass {
+  color: hsl(129, 88%, 26%);
+}
+
+.bug {
+  color: hsl(260, 100%, 26%);
+}
+
+.fail {
+  color: hsl(8, 100%, 43%);
+}
+
 /* Test specific CSS */
 .sr-only {
   position: absolute;
