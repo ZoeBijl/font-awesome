@@ -4,9 +4,6 @@ Assistive Technologies (AT) test for Font Awesome and icon fonts in general. We 
 * All base test results are in `tests/index.html`
 * A non-ARIA test bed can be found in `tests/plain-bed.html`
 
-## Progress
-At the time of writing—14 days in—the progress has been amazing! Great contributions from the community. Let's keep it up.
-
 ### Any help welcome
 From code, to test results, to how to actually do decent testing. Anything is welcome.
 
