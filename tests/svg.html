@@ -19,7 +19,7 @@
           <path class="path1" d="M146.286 585.143h987.429q14.857 0 25.714 10.857t10.857 25.714v256h-146.286v-146.286h-877.714v146.286h-146.286v-694.857q0-14.857 10.857-25.714t25.714-10.857h73.143q14.857 0 25.714 10.857t10.857 25.714v402.286zM475.429 402.286q0-60.571-42.857-103.429t-103.429-42.857-103.429 42.857-42.857 103.429 42.857 103.429 103.429 42.857 103.429-42.857 42.857-103.429zM1170.286 548.571v-36.571q0-90.857-64.286-155.143t-155.143-64.286h-402.286q-14.857 0-25.714 10.857t-10.857 25.714v219.429h658.286z"></path>
         </symbol>
         <symbol id="fa-internet-explorer" viewBox="0 0 1024 1024">
-          <title>internet-explorer</title>
+          <title>internet explorer</title>
           <path class="path1" d="M1024 535.429q0 32-4 59.429h-657.714q0 83.429 62.571 139.714t147.143 56.286q56.571 0 106-26.571t78-74.571h241.714q-32 90.857-97.429 160.571t-152.857 107.714-183.429 38q-106.857 0-203.429-47.429-130.286 66.286-225.143 66.286-135.429 0-135.429-150.286 0-65.714 25.714-157.143 9.714-34.286 62.286-130.857 113.714-205.714 271.429-346.286-105.143 45.143-244 202.286 36-156.571 162-256.857t286.571-100.286q17.143 0 25.714 0.571 145.714-66.857 247.429-66.857 36.571 0 66.286 7.429t54 23.143 38 43.714 13.714 65.714q0 66.286-42.857 163.429 57.714 104 57.714 222.857zM984 169.714q0-47.429-30.286-75.429t-78.286-28q-61.714 0-145.143 40 69.143 26.857 127.143 75.143t97.429 111.714q29.143-77.143 29.143-123.429zM73.143 876.571q0 49.143 27.714 75.714t76.857 26.571q65.714 0 152-47.429-69.714-41.143-122-104.571t-78.571-140q-56 117.143-56 189.714zM361.143 469.143h416q-2.857-81.143-64.571-135.429t-143.429-54.286q-82.286 0-143.714 54.286t-64.286 135.429z"></path>
         </symbol>
         <symbol id="fa-heart" viewBox="0 0 1024 1024">
@@ -49,11 +49,11 @@
 
           <p>The link in this example has an icon of a bed before the text "Book a hotel". The icon is however hidden for AT with <code>aria-hidden</code>.</p>
 
-          <p><a href="#book-hotel"><span class="fa fa-bed" aria-hidden="true"></span> Book a hotel</a></p>
+          <p><a href="#book-hotel"><svg viewBox="0 0 100 100" class="fa fa-bed" aria-hidden="true"><use xlink:href="#fa-bed"></use></svg> Book a hotel</a></p>
 
           <p>
             <code>
-              &lt;a href="#book-hotel"&gt;&lt;span class="fa fa-bed" aria-hidden="true"&gt;&lt;/span&gt; Book a hotel&lt;/a&gt;
+              &lt;svg viewBox="0 0 100 100" class="fa fa-bed" aria-hidden="true"&gt;&lt;use xlink:href="#fa-bed"&gt;&lt;/use&gt;&lt;/svg&gt;
             </code>
           </p>
         </section>
@@ -97,15 +97,13 @@
 
           <p>
             <a href="#github">
-              <span class="fa fa-github" aria-hidden="true"></span>
+              <svg viewBox="0 0 100 100" class="fa fa-github" aria-hidden="true"><use xlink:href="#fa-github"></use></svg>
               <span class="sr-only">GitHub</span>
             </a>
           </p>
 
-<pre><code>&lt;a href="#github"&gt;
-  &lt;span class="fa fa-github" aria-hidden="true"&gt;&lt;/span&gt;
-  &lt;span class="sr-only"&gt;GitHub&lt;/span&gt;
-&lt;/a&gt;</code></pre>
+<pre><code>&lt;svg viewBox="0 0 100 100" class="fa fa-github" aria-hidden="true"&gt;&lt;use xlink:href="#fa-github"&gt;&lt;/use&gt;&lt;/svg&gt;
+&lt;span class="sr-only"&gt;GitHub&lt;/span&gt;</code></pre>
         </section>
 
         <h3>Results</h3>
@@ -145,11 +143,15 @@
 
           <p>The link in this example has an icon of a book followed by the word "shop". The icon has an <code>aria-label</code> with a value of "book" to communicate "book shop" to AT.</p>
 
-          <p><a href="#book-shop"><span class="fa fa-book" aria-label="book"></span> shop</a></p>
+          <p>
+            <a href="#book-shop">
+              <svg viewBox="0 0 100 100" class="fa fa-book" aria-label="Book"><use xlink:href="#fa-book"></use></svg> shop
+            </a>
+          </p>
 
           <p>
             <code>
-              &lt;a href="#book-shop"&gt;&lt;span class="fa fa-book" aria-label="book"&gt;&lt;/span&gt; shop&lt;/a&gt;
+              &lt;svg viewBox="0 0 100 100" class="fa fa-book" aria-label="Book"&gt;&lt;use xlink:href="#fa-book"&gt;&lt;/use&gt;&lt;/svg&gt;
             </code>
           </p>
         </section>
@@ -194,11 +196,103 @@
             <p>In some situations a detailed literal description may be needed, but only when the content of the image is all or part of the conveyed information.</p>
           </blockquote>
 
-          <p>Every cool web project is made with <span class="fa fa-heart" role="img" aria-label="love"></span> these days. (And so is this one).</p>
+          <p>Every cool web project is made with <svg viewBox="0 0 100 100" class="fa fa-heart" aria-label="love"><use xlink:href="#fa-heart"></use></svg> these days. (And so is this one).</p>
 
           <p>
             <code>
-              &lt;span class="fa fa-heart" role="img" aria-label="love"&gt;&lt;/span&gt;
+              &lt;svg viewBox="0 0 100 100" role="img" aria-label="love" class="fa fa-heart"&gt;&lt;use xlink:href="#fa-heart"&gt;&lt;/use&gt;&lt;/svg&gt;
+            </code>
+          </p>
+        </section>
+
+        <h3>Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">AT, Browser, OS</th>
+              <th scope="col">Test Result</th>
+              <th scope="col">Expected Result</th>
+              <th scope="col">Actual Result</th>
+              <th scope="col">Caret navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">-</th>
+              <td class="">-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- <h3>Issues</h3>
+        <ul>
+          <li></li>
+        </ul> -->
+      </article>
+
+      <article id="test-5" tabindex="-1">
+        <h2>Test five: rely on <code>title</code> attribute in icon</h2>
+        <p>SVG's can have a <code>title</code> attribute. This information <a href="http://www.w3.org/TR/svg-aam-1.0/">should be used in the name calcualtion</a>.</p>
+
+        <section>
+          <h3>Example</h3>
+
+          <p>Icon is used as a replacement for the words: internet explorer.</p>
+
+          <p><svg viewBox="0 0 100 100" class="fa fa-ie"><use xlink:href="#fa-internet-explorer"></use></svg> is the best.</p>
+
+          <p>
+            <code>
+              &lt;svg viewBox="0 0 100 100" class="fa fa-ie"&gt;&lt;use xlink:href="#fa-internet-explorer"&gt;&lt;/use&gt;&lt;/svg&gt;
+            </code>
+          </p>
+        </section>
+
+        <h3>Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">AT, Browser, OS</th>
+              <th scope="col">Test Result</th>
+              <th scope="col">Expected Result</th>
+              <th scope="col">Actual Result</th>
+              <th scope="col">Caret navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">-</th>
+              <td class="">-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- <h3>Issues</h3>
+        <ul>
+          <li></li>
+        </ul> -->
+      </article>
+
+      <article id="test-6" tabindex="-1">
+        <h2>Test six: rely on <code>title</code> attribute in icon inside interactive element</h2>
+        <p>Same as test number 5, but inside an interactive element.</p>
+
+        <section>
+          <h3>Example</h3>
+
+          <p>Icon is used as a replacement for the words: internet explorer.</p>
+
+          <p><a href="#download-ie">Download <svg viewBox="0 0 100 100" class="fa fa-ie"><use xlink:href="#fa-internet-explorer"></use></svg></a></p>
+
+          <p>
+            <code>
+              &lt;svg viewBox="0 0 100 100" class="fa fa-ie"&gt;&lt;use xlink:href="#fa-internet-explorer"&gt;&lt;/use&gt;&lt;/svg&gt;
             </code>
           </p>
         </section>
