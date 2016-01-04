@@ -36,7 +36,9 @@
 
     <main>
       <h1>How do assistive technologies handle Font Awesome?</h1>
-      <p>This document lists different options to SVG icons&mdash;SVG's supplied by <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a> on this page&mdash;accessible. It also lists the limitations of those options. Because these are just examples; all links are internal (they don't go anywhere).</p>
+      <p>This document lists different options to SVG icons&mdash;SVGs supplied by <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a> on this page&mdash;accessible. It also lists the limitations of those options. Because these are just examples; all links are internal (they don't go anywhere).</p>
+      <p>Note 1: Internet Explorer is giving SVGs a tab index. We have not set the "focusable" attribute to "no", but doing so would stop this behaviour.</p>
+      <p>Note 2: tests done with NVDA are using the latest version as of this testing date, 28 December 2015.</p>
 
       <!-- NOTE: might need to update the table as we go along -->
       <!-- NOTE: template for tests can be found in ../test-template.html -->
@@ -71,24 +73,59 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">-</th>
+              <th scope="row">VO to be tested...</th>
               <td class="">-</td>
+              <td>Book a hotel</td>
               <td>-</td>
               <td>-</td>
-              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">Orca 3.18, Firefox 42, Ubuntu 14.04</th>
+              <td class="pass">Pass</td>
+              <td>Book a hotel link</td>
+              <td>Book a hotel link</td>
+              <td>B-o-o-k a h-o-t-e-l</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, Firefox 43, Windows 7</th>
+              <td class="pass">Pass</td>
+              <td>link Book a hotel</td>
+              <td>link Book a hotel</td>
+              <td>B-o-o-k a h-o-t-e-l</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td class="pass">Pass</td>
+              <td>link Book a hotel</td>
+              <td>link Book a hotel</td>
+              <td>B-o-o-k a h-o-t-e-l</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), IE 11, Windows 7</th>
+              <td class="pass">Pass</td>
+              <td>link Book a hotel</td>
+              <td>link Book a hotel</td>
+              <td>b-o-o-k a h-o-t-e-l</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), Firefox 43, Windows 7</th>
+              <td class="pass">Pass</td>
+              <td>link Book a hotel</td>
+              <td>link Book a hotel</td>
+              <td>b-o-o-k a h-o-t-e-l</td>
             </tr>
           </tbody>
         </table>
 
-        <!-- <h3>Issues</h3>
+        <h3>Issues</h3>
         <ul>
-          <li></li>
-        </ul> -->
+          <li>None found.</li>
+        </ul>
       </article>
 
       <article id="test-2" tabindex="-1">
         <h2>Test two: visually hidden text and <code>aria-hidden</code> on the icon</h2>
-        <p>Besides hiding the icon from AT, we can also provide visually hidden text that describes the icon or conveys its meaning. This example uses the popular <code>sr-only</code> class to mark an elment as <samp>for screen readers only".</p>
+        <p>Besides hiding the icon from AT, we can also provide visually hidden text that describes the icon or conveys its meaning. This example uses the popular <code>sr-only</code> class to mark an elment as <samp>"for screen readers only"</samp>.</p>
 
         <section>
           <h3>Example</h3>
@@ -119,19 +156,54 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">-</th>
+              <th scope="row">VO to be tested...</th>
               <td class="">-</td>
+              <td>Github</td>
               <td>-</td>
               <td>-</td>
-              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">Orca 3.18, Firefox 42, Ubuntu 14.04</th>
+              <td class="pass">Pass</td>
+              <td>Github link</td>
+              <td>Github link</td>
+              <td>G-i-t-h-u-b</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, Firefox 43, Windows 7</th>
+              <td class="pass">Pass</td>
+              <td>link Github</td>
+              <td>link Github</td>
+              <td>G-i-t-h-u-b</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td class="pass">Pass</td>
+              <td>link Github</td>
+              <td>link Github</td>
+              <td>G-i-t-h-u-b</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), IE 11, Windows 7</th>
+              <td class="pass">Pass</td>
+              <td>link Github</td>
+              <td>link Github</td>
+              <td>g-i-t-h-u-b</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), Firefox 43, Windows 7</th>
+              <td class="pass">Pass</td>
+              <td>link Github</td>
+              <td>link Github</td>
+              <td>g-i-t-h-u-b</td>
             </tr>
           </tbody>
         </table>
 
-        <!-- <h3>Issues</h3>
+        <h3>Issues</h3>
         <ul>
-          <li></li>
-        </ul> -->
+          <li>Note: NVDA on Firefox, when reading by line, first "Link", then has a newline, then announces "link Github".</li>
+        </ul>
       </article>
 
       <article id="test-3" tabindex="-1">
@@ -169,19 +241,54 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">-</th>
+              <th scope="row">VO to be tested...</th>
               <td class="">-</td>
+              <td>Book shop</td>
               <td>-</td>
               <td>-</td>
-              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">Orca 3.18, Firefox 42, Ubuntu 14.04</th>
+              <td class="fail">Fail</td>
+              <td>Book shop link</td>
+              <td>shop link</td>
+              <td>s-h-o-p</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, Firefox 43, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>link Book shop</td>
+              <td>link shop</td>
+              <td>s-h-o-p</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>link Book shop</td>
+              <td>link shop</td>
+              <td>s-h-o-p</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), IE 11, Windows 7</th>
+              <td class="buggy">Buggy</td>
+              <td>link Book shop</td>
+              <td>book graphic link shop</td>
+              <td>unable to test*</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), Firefox 43, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>link Book shop</td>
+              <td>link shop</td>
+              <td>s-h-o-p</td>
             </tr>
           </tbody>
         </table>
 
-        <!-- <h3>Issues</h3>
+        <h3>Issues</h3>
         <ul>
-          <li></li>
-        </ul> -->
+          <li>* Aria-label is not announced except by NVDA on IE. However trying to spell in that combination dropped the tester out of the link and moved on to the next or prevoius line. "Book graphic link shop" was only heard while tabbing to the anchor.</li>
+        </ul>
       </article>
 
       <article id="test-4" tabindex="-1">
@@ -218,29 +325,64 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">-</th>
+              <th scope="row">VO to be tested...</th>
               <td class="">-</td>
+              <td>love image</td>
               <td>-</td>
               <td>-</td>
-              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">Orca 3.18, Firefox 42, Ubuntu 14.04</th>
+              <td class="fail">Fail</td>
+              <td>love image</td>
+              <td>no pause, as if nothing there</td>
+              <td>no characters</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, Firefox 43, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>graphic love</td>
+              <td>no pause, as if nothing there</td>
+              <td>no characters</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>graphic love</td>
+              <td>empty newline announced, pause heard when tabbing</td>
+              <td>newline only</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), IE 11, Windows 7</th>
+              <td class="pass">Pass</td>
+              <td>graphic love</td>
+              <td>graphic love</td>
+              <td>l-o-v-e</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), Firefox 43, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>graphic love</td>
+              <td>no pause, as if nothing there</td>
+              <td>no characters</td>
             </tr>
           </tbody>
         </table>
 
-        <!-- <h3>Issues</h3>
+        <h3>Issues</h3>
         <ul>
-          <li></li>
-        </ul> -->
+          <li>All tested combinations fail except NVDA on IE.</li>
+        </ul>
       </article>
 
       <article id="test-5" tabindex="-1">
-        <h2>Test five: rely on <code>title</code> attribute in icon</h2>
-        <p>SVG's can have a <code>title</code> attribute. This information <a href="http://www.w3.org/TR/svg-aam-1.0/">should be used in the name calcualtion</a>.</p>
+        <h2>Test five: rely on <code>title</code> tag in icon</h2>
+        <p>SVGs can have a <code>title</code> tag. This information <a href="http://www.w3.org/TR/svg-aam-1.0/">should be used in the name calculation</a>.</p>
 
         <section>
           <h3>Example</h3>
 
-          <p>Icon is used as a replacement for the words: internet explorer.</p>
+          <p>Icon is used as a replacement for the words: internet explorer. Here, the title is referenced from within a <code>&lt;use&gt;</code> tag using <code>xlink:href</code> to reference it.</p>
 
           <p><svg viewBox="0 0 100 100" class="fa fa-ie"><use xlink:href="#fa-internet-explorer"></use></svg> is the best.</p>
 
@@ -264,35 +406,70 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">-</th>
+              <th scope="row">VO to be tested...</th>
               <td class="">-</td>
+              <td>Internet Explorer is the best</td>
               <td>-</td>
               <td>-</td>
-              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">Orca 3.18, Firefox 42, Ubuntu 14.04</th>
+              <td class="fail">Fail</td>
+              <td>Internet Explorer is the best</td>
+              <td>nothing announced (except the plain text "is the best")</td>
+              <td>no characters (from SVG)</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, Firefox 43, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>Internet Explorer is the best</td>
+              <td>nothing announced</td>
+              <td>no characters</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>Internet Explorer is the best</td>
+              <td>nothing announced</td>
+              <td>no characters</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), IE 11, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>Internet Explorer is the best</td>
+              <td>nothing announced</td>
+              <td>no characters</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), Firefox 43, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>Internet Explorer is the best</td>
+              <td>nothing announced</td>
+              <td>no characters</td>
             </tr>
           </tbody>
         </table>
 
-        <!-- <h3>Issues</h3>
+        <h3>Issues</h3>
         <ul>
-          <li></li>
-        </ul> -->
+          <li>Total fails. Big whales. Oh noes.</li>
+        </ul>
       </article>
 
       <article id="test-6" tabindex="-1">
-        <h2>Test six: rely on <code>title</code> attribute in icon inside interactive element</h2>
-        <p>Same as test number 5, but inside an interactive element.</p>
+        <h2>Test six: rely on <code>title</code> tag in icon inside interactive element</h2>
+        <p>Same as test number 5, but inside an interactive element within the SVG.</p>
 
         <section>
           <h3>Example</h3>
 
           <p>Icon is used as a replacement for the words: internet explorer.</p>
+      
+          <p>Download <svg viewBox="0 0 100 100" class="fa fa-ie"><a xlink:href="#void"><use xlink:href="#fa-internet-explorer"></use></a></svg>.</p>
 
-          <p><a href="#download-ie">Download <svg viewBox="0 0 100 100" class="fa fa-ie"><use xlink:href="#fa-internet-explorer"></use></svg></a></p>
-
-          <p>
+            <p>
             <code>
-              &lt;svg viewBox="0 0 100 100" class="fa fa-ie"&gt;&lt;use xlink:href="#fa-internet-explorer"&gt;&lt;/use&gt;&lt;/svg&gt;
+              &lt;svg viewBox="0 0 100 100" class="fa fa-ie"&gt;&lt;a xlink:href="#void"&gt;&lt;use xlink:href="#fa-internet-explorer"&gt;&lt;/use&gt;&lt;/a&gt;&lt;/svg&gt;
             </code>
           </p>
         </section>
@@ -310,21 +487,150 @@
           </thead>
           <tbody>
             <tr>
-              <th scope="row">-</th>
+              <th scope="row">VO to be tested...</th>
               <td class="">-</td>
+              <td>Download Internet Explorer</td>
               <td>-</td>
               <td>-</td>
-              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">Orca 3.18, Firefox 42, Ubuntu 14.04</th>
+              <td class="fail">Fail</td>
+              <td>Download Internet Explorer</td>
+              <td>nothing announced (except the plain text "Download")</td>
+              <td>no characters (from SVG)</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, Firefox 43, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>Download Internet Explorer</td>
+              <td>"link number void" (the contents of the href string)</td>
+              <td>no characters</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>Download Internet Explorer</td>
+              <td>nothing announced, makes 2 tab stops</td>
+              <td>no characters</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), IE 11, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>Download Internet Explorer</td>
+              <td>"Download graphic graphic dot", announces "graphic graphic" when tabbing</td>
+              <td>no characters</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), Firefox 43, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>Download Internet Explorer</td>
+              <td>"Download dot" (that is, the SVG being there makes NVDA see the . as a loose character)</td>
+              <td>no characters</td>
             </tr>
           </tbody>
         </table>
 
-        <!-- <h3>Issues</h3>
+        <h3>Issues</h3>
         <ul>
-          <li></li>
-        </ul> -->
+          <li>While IE seems to recognise the focusable inside the SVG, nobody reads the imported title text that should be inside.</li>
+          <li>If VoiceOver does not mention anything, suggest a test with the same SVG anchor element but then with manual &lt;title&gt; element directly inside.</li>
+        </ul>
       </article>
 
+      <article id="test-7" tabindex="-1">
+        <h2>Test seven: use direct <code>title</code> tag in icon</h2>
+        <p>Here we use a direct <code>&lt;title&gt;</code> tag in the SVG. With this tag in the SVG we could additionally add an id to the <code>title</code> and reference the SVG itself to the title using aria-labelledby (which we do not do here) as <a href="http://www.sitepoint.com/tips-accessible-svg/">described by L&#233;onie Watson</a>.</p>
+
+        <section>
+          <h3>Example</h3>
+
+          <p>Icon is used as a replacement for the words: internet explorer.</p>
+
+          <p>
+          <svg viewBox="0 0 1024 1024" style="width:1em;height:1em;">
+            <title>internet explorer</title>
+            <path class="path1" d="M1024 535.429q0 32-4 59.429h-657.714q0 83.429 62.571 139.714t147.143 56.286q56.571 0 106-26.571t78-74.571h241.714q-32 90.857-97.429 160.571t-152.857 107.714-183.429 38q-106.857 0-203.429-47.429-130.286 66.286-225.143 66.286-135.429 0-135.429-150.286 0-65.714 25.714-157.143 9.714-34.286 62.286-130.857 113.714-205.714 271.429-346.286-105.143 45.143-244 202.286 36-156.571 162-256.857t286.571-100.286q17.143 0 25.714 0.571 145.714-66.857 247.429-66.857 36.571 0 66.286 7.429t54 23.143 38 43.714 13.714 65.714q0 66.286-42.857 163.429 57.714 104 57.714 222.857zM984 169.714q0-47.429-30.286-75.429t-78.286-28q-61.714 0-145.143 40 69.143 26.857 127.143 75.143t97.429 111.714q29.143-77.143 29.143-123.429zM73.143 876.571q0 49.143 27.714 75.714t76.857 26.571q65.714 0 152-47.429-69.714-41.143-122-104.571t-78.571-140q-56 117.143-56 189.714zM361.143 469.143h416q-2.857-81.143-64.571-135.429t-143.429-54.286q-82.286 0-143.714 54.286t-64.286 135.429z"></path>
+          </svg>
+          is awesome.</p>
+
+<!--p>test 2 from l&#233;onie:</p>
+<svg version="1.1" width="300" height="200" aria-labelledby="title desc">
+<title id="title">Green rectangle</title>
+<desc id="desc">A light green rectangle with rounded corners and a dark green border</desc>
+<rect width="75" height="50" rx="20" ry="20" fill="#90ee90" stroke="#228b22" stroke-fill="1" />
+</svg-->
+
+          <p>
+          <code>
+              &lt;svg viewBox="0 0 1024 1024" style="width:1em;height:1em;"&gt;&lt;title&gt;internet explorer&lt;/title&gt;
+            &lt;path class="path1" d="M1024 535.429q0 32-4 59.429h-657.714q0 83.429 62.571 139.714t147.143 56.286q56.571 0 106-26.571t78-74.571h241.714q-32 90.857-97.429 160.571t-152.857 107.714-183.429 38q-106.857 0-203.429-47.429-130.286 66.286-225.143 66.286-135.429 0-135.429-150.286 0-65.714 25.714-157.143 9.714-34.286 62.286-130.857 113.714-205.714 271.429-346.286-105.143 45.143-244 202.286 36-156.571 162-256.857t286.571-100.286q17.143 0 25.714 0.571 145.714-66.857 247.429-66.857 36.571 0 66.286 7.429t54 23.143 38 43.714 13.714 65.714q0 66.286-42.857 163.429 57.714 104 57.714 222.857zM984 169.714q0-47.429-30.286-75.429t-78.286-28q-61.714 0-145.143 40 69.143 26.857 127.143 75.143t97.429 111.714q29.143-77.143 29.143-123.429zM73.143 876.571q0 49.143 27.714 75.714t76.857 26.571q65.714 0 152-47.429-69.714-41.143-122-104.571t-78.571-140q-56 117.143-56 189.714zM361.143 469.143h416q-2.857-81.143-64.571-135.429t-143.429-54.286q-82.286 0-143.714 54.286t-64.286 135.429z"&gt;&lt;/path&gt;&lt;/svg&gt;
+            </code>
+          </p>
+        </section>
+
+        <h3>Results</h3>
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">AT, Browser, OS</th>
+              <th scope="col">Test Result</th>
+              <th scope="col">Expected Result</th>
+              <th scope="col">Actual Result</th>
+              <th scope="col">Caret navigation</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">VO to be tested...</th>
+              <td class="">-</td>
+              <td>Internet Explorer is awesome</td>
+              <td>-</td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <th scope="row">Orca 3.18, Firefox 42, Ubuntu 14.04</th>
+              <td class="fail">Fail</td>
+              <td>Internet Explorer is awesome</td>
+              <td>nothing announced (except the plain text "is awesome")</td>
+              <td>no characters (from SVG)</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, Firefox 43, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>graphic Internet Explorer is awesome</td>
+              <td>nothing announced</td>
+              <td>no characters</td>
+            </tr>
+            <tr>
+              <th scope="row">JAWS 16, IE 11, Windows 7</th>
+              <td class="pass">Pass</td>
+              <td>graphic Internet Explorer is awesome</td>
+              <td>"graphic internet explorer"</td>
+              <td>i-n-t-e-r-n-e-t e-x-p-l-o-r-e-r</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), IE 11, Windows 7</th>
+              <td class="buggy">Buggy</td>
+              <td>Internet Explorer is awesome</td>
+              <td>"graphic internet explorer graphic internet explorer", announces "graphic graphic" when tabbing</td>
+              <td>i-n-t-e-r-n-e-t e-x-p-l-o-r-e-r but twice</td>
+            </tr>
+            <tr>
+              <th scope="row">NVDA (latest), Firefox 43, Windows 7</th>
+              <td class="fail">Fail</td>
+              <td>Internet Explorer is awesome</td>
+              <td>nothing announced</td>
+              <td>no characters</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Issues</h3>
+        <ul>
+          <li>I need to run through these again after a fresh reboot, but looks like NVDA's double-announcement is still a problem (it acts as if there are nested graphics: when you go character by character you come out of graphic twice as well), and nobody else is announcing (maybe JAWS+IE)...</li>
+        </ul>
+      </article>
     </main>
   </body>
 </html>
