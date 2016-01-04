@@ -37,7 +37,8 @@
     <main>
       <h1>How do assistive technologies handle Font Awesome?</h1>
       <p>This document lists different options to SVG icons&mdash;SVGs supplied by <a href="https://fortawesome.github.io/Font-Awesome/">Font Awesome</a> on this page&mdash;accessible. It also lists the limitations of those options. Because these are just examples; all links are internal (they don't go anywhere).</p>
-      <p>Note: tests done with NVDA are using the latest version as of this testing date, 28 December 2015.</p>
+      <p>Note 1: Internet Explorer is giving SVGs a tab index. We have not set the "focusable" attribute to "no", but doing so would stop this behaviour.</p>
+      <p>Note 2: tests done with NVDA are using the latest version as of this testing date, 28 December 2015.</p>
 
       <!-- NOTE: might need to update the table as we go along -->
       <!-- NOTE: template for tests can be found in ../test-template.html -->
@@ -119,7 +120,6 @@
         <h3>Issues</h3>
         <ul>
           <li>None found.</li>
-          <li>Note: In Internet Explorer, the SVGs seem to be in the tab index and so can be tabbed to. This goes for all the tests here.</li>
         </ul>
       </article>
 
@@ -349,7 +349,7 @@
               <th scope="row">JAWS 16, IE 11, Windows 7</th>
               <td class="fail">Fail</td>
               <td>graphic love</td>
-              <td>empty newline announced</td>
+              <td>empty newline announced, pause heard when tabbing</td>
               <td>newline only</td>
             </tr>
             <tr>
@@ -598,16 +598,16 @@
             <tr>
               <th scope="row">JAWS 16, Firefox 43, Windows 7</th>
               <td class="fail">Fail</td>
-              <td>Internet Explorer is awesome</td>
+              <td>graphic Internet Explorer is awesome</td>
               <td>nothing announced</td>
               <td>no characters</td>
             </tr>
             <tr>
               <th scope="row">JAWS 16, IE 11, Windows 7</th>
-              <td class="buggy">Buggy</td>
-              <td>Internet Explorer is awesome</td>
-              <td>*conflicting results* --graphic, newline, "internet explorer" or nothing</td>
-              <td>announces only spaces</td>
+              <td class="pass">Pass</td>
+              <td>graphic Internet Explorer is awesome</td>
+              <td>"graphic internet explorer"</td>
+              <td>i-n-t-e-r-n-e-t e-x-p-l-o-r-e-r</td>
             </tr>
             <tr>
               <th scope="row">NVDA (latest), IE 11, Windows 7</th>
