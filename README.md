@@ -63,6 +63,7 @@ Other configurations for accessibility:
 * [Testing labeling icons](http://haltersweb.github.io/Accessibility/testing-icon-labeling.html)
 * [Accessible svg sprite icons](https://gist.github.com/davidhund/564331193e1085208d7e)
 * [Testing accessible text for external SVG icons](https://dl.dropboxusercontent.com/u/145744/accessible-svg-icon/test.html#test)
+* [Grunting Icons into SVG Sprites](https://www.thinkful.com/projects/grunting-icons-into-svg-sprites-573)
 
 ## Contributors
 
