@@ -1,4 +1,7 @@
 # Font Awesome
+
+Note: this project is archived.
+
 Assistive Technologies (AT) test for Font Awesome and icon fonts in general. We decided to do these tests after [Dylan raised an issue with Font Awesome](https://github.com/FortAwesome/Font-Awesome/issues/6133).
 
 * All [font based test results](https://rawgit.com/ZoeBijl/font-awesome/master/tests/index.html) are in `tests/index.html`
